@@ -1,0 +1,125 @@
+server:
+  port: 28184
+  servlet:
+    context-path: /acdr
+    # 定义请求响应的字符编码
+    encoding:
+      charset: UTF-8
+      force-request: true
+      force-response: true
+  tomcat:
+    # Tomcat日志
+    access-log:
+      enabled: true
+      encoding: UTF-8
+      max-days: 7
+      directory: ${path.logs}tomcat\
+
+logging:
+  charset:
+    console: UTF-8
+    file: UTF-8
+  file:
+    name: ${path.logs}application.log
+  level:
+    root: info
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/acdr?useSSL=FALSE&serverTimezone=Asia/Shanghai&useOldAliasMetadataBehavior=true&rewriteBatchedStatements=true
+    username: root
+    password: root
+    # HikariCP连接池
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      pool-name: HikariCP
+      read-only: false
+      connection-test-query: SELECT 1
+      connection-timeout: 30000 # 数据库连接超时时间,默认30秒，即30000
+      max-lifetime: 60000 # 此属性控制池中连接的最长生命周期，值0表示无限生命周期，默认1800000即30分钟
+      maximum-pool-size: 10 # 连接池最大连接数，默认是10
+      minimum-idle: 2 # 最小空闲连接数量
+      idle-timeout: 30000 # 空闲连接存活最大时间，默认600000（10分钟）
+      auto-commit: true  # 此属性控制从池返回的连接的默认自动提交行为,默认值：true
+  data:
+    # redis配置
+    redis:
+      # Redis数据库索引（默认为0）
+      database: 3
+      # Redis服务器地址
+      host: 127.0.0.1
+      # Redis服务器连接端口
+      port: 6379
+      # Redis服务器连接密码（默认为空）
+      # password:
+      # 连接超时时间
+      timeout: 10s
+      lettuce:
+        pool:
+          # 连接池最大连接数
+          max-active: 200
+          # 连接池最大阻塞等待时间（使用负值表示没有限制）
+          max-wait: -1ms
+          # 连接池中的最大空闲连接
+          max-idle: 10
+          # 连接池中的最小空闲连接
+          min-idle: 0
+# Sa-Token配置
+sa-token:
+  # token 名称 (同时也是cookie名称)
+  token-name: Authorization
+  # token 有效期，单位s 默认30天, -1代表永不过期
+  timeout: 2592000
+  # token 临时有效期 (指定时间内无操作就视为token过期) 单位: 秒
+  active-timeout: -1
+  # 是否允许同一账号并发登录 (为true时允许一起登录, 为false时新登录挤掉旧登录)
+  is-concurrent: false
+  # 在多人登录同一账号时，是否共用一个token (为true时所有登录共用一个token, 为false时每次登录新建一个token)
+  is-share: false
+  # token风格
+  token-style: uuid
+  # 是否输出操作日志
+  is-log: false
+
+mybatis-plus:
+  # mapper.xml文件位置
+  mapper-locations: classpath*:com/yskj/**/master/**/mapper/xml/*.xml
+  configuration:
+    # 开启MyBatis的SQL打印
+    #log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    # 当使用非实体类接收返回数据时，字段值若为空则返回null（不设置此项会忽略为null的字段）
+    call-setters-on-nulls: true
+
+# 系统管理
+management:
+  endpoint:
+    shutdown:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+# 自定义配置
+path:
+  home: D:\system\acdr\
+  logs: ${path.home}logs\
+  file: ${path.home}file\
+  profile: ${path.home}\profile\
+
+phone:
+  key: e1bc0661299f1303aef1c5659d0ae1c6
+  model: 263680
+  url: http://v.juhe.cn/sms/send
+
+sky:
+  wechat:
+    appid: wxbcbdfd32af81ee15
+    secret: f7ea5ec0873e291039c7f5ea8f75bb72
+    login: https://api.weixin.qq.com/sns/jscode2session
+
+aliyun:
+  appcode: 51629a0d71eb486c880162f2a1fe828b
+  auth_url: https://idenauthen.market.alicloudapi.com/idenAuthentication
+  ocr_url: https://cardnumber.market.alicloudapi.com/rest/160601/ocr/ocr_idcard.json

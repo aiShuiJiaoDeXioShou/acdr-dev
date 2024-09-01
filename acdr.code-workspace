@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "acdr"
+		},
+		{
+			"path": "acdr-ui"
+		}
+	],
+	"settings": {
+		"java.compile.nullAnalysis.mode": "automatic"
+	}
+}

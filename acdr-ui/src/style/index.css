@@ -1,0 +1,44 @@
+// #ifdef H5 || APP-PLUS
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+// #endif
+
+// #ifdef MP-WEIXIN
+page,
+view,
+text,
+image,
+input,
+button,
+textarea {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+page,
+view,
+text,
+image,
+input,
+button,
+textarea,
+swiper,
+scroll-view,
+picker,
+checkbox,
+radio {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+// #endif
+
+.txt {
+  @apply max-w-xs overflow-hidden text-ellipsis whitespace-nowrap block;
+}

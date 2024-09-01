@@ -1,0 +1,353 @@
+{
+  "globalStyle": {
+    "navigationStyle": "default",
+    "navigationBarTitleText": "宠屋",
+    "navigationBarBackgroundColor": "#f8f8f8",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#FFFFFF"
+  },
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      "^wd-(.*)": "wot-design-uni/components/wd-$1/wd-$1.vue",
+      "^(?!z-paging-refresh|z-paging-load-more)z-paging(.*)": "z-paging/components/z-paging$1/z-paging$1.vue"
+    }
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#000000",
+    "backgroundColor": "#F8F8F8",
+    "borderStyle": "black",
+    "height": "50px",
+    "fontSize": "10px",
+    "iconWidth": "24px",
+    "spacing": "3px",
+    "list": [
+      {
+        "iconPath": "static/tabbar/home.png",
+        "selectedIconPath": "static/tabbar/homeL.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "iconPath": "static/tabbar/space.png",
+        "selectedIconPath": "static/tabbar/spaceL.png",
+        "pagePath": "pages/space/index",
+        "text": "互动空间"
+      },
+      {
+        "iconPath": "static/tabbar/24gl-paperPlane.png",
+        "selectedIconPath": "static/tabbar/24gl-paperPlaneL.png",
+        "pagePath": "pages/push/index",
+        "text": "发布"
+      },
+      {
+        "iconPath": "static/tabbar/message.png",
+        "selectedIconPath": "static/tabbar/messageL.png",
+        "pagePath": "pages/message/index",
+        "text": "消息"
+      },
+      {
+        "iconPath": "static/tabbar/my.png",
+        "selectedIconPath": "static/tabbar/myL.png",
+        "pagePath": "pages/my/index",
+        "text": "我的 "
+      }
+    ]
+  },
+  "pages": [
+    {
+      "path": "pages/index/index",
+      "type": "home",
+      "style": {
+        "navigationBarTitleText": "首页",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/address/index",
+      "type": "page",
+      "style": {
+        "navigationBarTitleText": "新增地址"
+      }
+    },
+    {
+      "path": "pages/ai/ai-interactive-space",
+      "type": "page",
+      "style": {
+        "navigationBarTitleText": "AI互动空间"
+      }
+    },
+    {
+      "path": "pages/certification/index",
+      "type": "page",
+      "layout": "default",
+      "style": {
+        "navigationBarTitleText": "宠托师认证页面",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/certification/pet-sitter",
+      "type": "page",
+      "layout": "default",
+      "style": {
+        "navigationBarTitleText": "宠托师资格证申请页面",
+        "navigationBarBackgroundColor": "#ffffff"
+      }
+    },
+    {
+      "path": "pages/extended/index",
+      "type": "page",
+      "style": {
+        "navigationBarTitleText": "更多应用"
+      }
+    },
+    {
+      "path": "pages/login/index",
+      "type": "page",
+      "layout": "default",
+      "style": {
+        "navigationBarTitleText": "登录",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/login/phone",
+      "type": "page",
+      "style": {
+        "navigationBarTitleText": "手机号登录",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/mall/index",
+      "type": "page",
+      "layout": "default",
+      "style": {
+        "navigationBarTitleText": "宠物商城"
+      }
+    },
+    {
+      "path": "pages/map/index",
+      "type": "page",
+      "layout": "default",
+      "style": {
+        "navigationBarTitleText": "地图详细页面"
+      }
+    },
+    {
+      "path": "pages/message/chat",
+      "type": "page",
+      "style": {
+        "navigationBarTitleText": "客服"
+      }
+    },
+    {
+      "path": "pages/message/index",
+      "type": "page",
+      "style": {
+        "navigationBarTitleText": "消息"
+      }
+    },
+    {
+      "path": "pages/message/message-list",
+      "type": "page",
+      "style": {
+        "navigationBarTitleText": "消息列表"
+      }
+    },
+    {
+      "path": "pages/my/index",
+      "type": "page",
+      "style": {
+        "navigationBarTitleText": "我的页面",
+        "navigationStyle": "custom"
+      },
+      "needLogin": true
+    },
+    {
+      "path": "pages/order/index",
+      "type": "page",
+      "layout": "default",
+      "style": {
+        "navigationBarTitleText": "服务订单",
+        "navigationBarBackgroundColor": "#ffff"
+      }
+    },
+    {
+      "path": "pages/order/order-detail",
+      "type": "page"
+    },
+    {
+      "path": "pages/order/take",
+      "type": "page",
+      "layout": "default",
+      "style": {
+        "navigationBarTitleText": "宠托师接单页面"
+      }
+    },
+    {
+      "path": "pages/others/agreement",
+      "type": "page",
+      "layout": "default",
+      "style": {
+        "navigationBarTitleText": "服务条款页面"
+      }
+    },
+    {
+      "path": "pages/others/null",
+      "type": "page"
+    },
+    {
+      "path": "pages/others/official-account",
+      "type": "page",
+      "style": {
+        "navigationBarTitleText": "宠屋微信公众号"
+      }
+    },
+    {
+      "path": "pages/permission/bind-phone",
+      "type": "page",
+      "style": {
+        "navigationBarTitleText": "手机号绑定"
+      }
+    },
+    {
+      "path": "pages/permission/real-name-auth",
+      "type": "page",
+      "style": {
+        "navigationBarTitleText": "实名认证"
+      }
+    },
+    {
+      "path": "pages/pet/index",
+      "type": "page",
+      "layout": "default",
+      "style": {
+        "navigationBarTitleText": "宠物管理"
+      }
+    },
+    {
+      "path": "pages/pet/pet-add-page",
+      "type": "page",
+      "style": {
+        "navigationBarTitleText": "宠物档案信息"
+      }
+    },
+    {
+      "path": "pages/pet/pet-detail-page",
+      "type": "page",
+      "style": {
+        "navigationBarTitleText": "宠物详情",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/push/door",
+      "type": "page",
+      "layout": "default",
+      "style": {
+        "navigationBarTitleText": "发布上门服务"
+      }
+    },
+    {
+      "path": "pages/push/goods",
+      "type": "page"
+    },
+    {
+      "path": "pages/push/index",
+      "type": "page",
+      "style": {
+        "navigationBarTitleText": "发布与分享",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/push/share",
+      "type": "page",
+      "style": {
+        "navigationBarTitleText": "发布页面"
+      }
+    },
+    {
+      "path": "pages/service/detail",
+      "type": "page",
+      "style": {
+        "navigationBarTitleText": "宠托师服务详情",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/service/door",
+      "type": "page",
+      "style": {
+        "navigationBarTitleText": "上门服务"
+      }
+    },
+    {
+      "path": "pages/service/index",
+      "type": "page",
+      "layout": "default",
+      "style": {
+        "navigationBarTitleText": "服务页面"
+      }
+    },
+    {
+      "path": "pages/service/my-service",
+      "type": "page",
+      "layout": "default",
+      "style": {
+        "navigationBarTitleText": "我的服务"
+      }
+    },
+    {
+      "path": "pages/service/search",
+      "type": "page",
+      "style": {
+        "navigationBarTitleText": "选择服务",
+        "navigationBarBackgroundColor": "#ffff"
+      }
+    },
+    {
+      "path": "pages/service/shop",
+      "type": "page",
+      "layout": "default",
+      "style": {
+        "navigationBarTitleText": "商城页面"
+      }
+    },
+    {
+      "path": "pages/service/slippery",
+      "type": "page",
+      "style": {
+        "navigationBarTitleText": "宠物培溜"
+      }
+    },
+    {
+      "path": "pages/service/store",
+      "type": "page",
+      "layout": "default",
+      "style": {
+        "navigationBarTitleText": "商城页面"
+      }
+    },
+    {
+      "path": "pages/settings/index",
+      "type": "page",
+      "style": {
+        "navigationBarTitleText": "设置页面"
+      },
+      "needLogin": true
+    },
+    {
+      "path": "pages/space/index",
+      "type": "page",
+      "style": {
+        "navigationBarTitleText": "互动空间",
+        "navigationStyle": "custom"
+      }
+    }
+  ],
+  "subPackages": []
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.iocoder.yudao.module.master.pet.mapper.ExpandLocOrderInfoMapper">
+
+    <resultMap id="BaseResultMap" type="cn.iocoder.yudao.module.master.pet.entity.ExpandLocOrderInfo">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="number" column="number" jdbcType="VARCHAR"/>
+            <result property="userId" column="user_id" jdbcType="BIGINT"/>
+            <result property="time" column="time" jdbcType="TIMESTAMP"/>
+            <result property="amount" column="amount" jdbcType="DECIMAL"/>
+            <result property="phone" column="phone" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,number,user_id,
+        time,amount,phone
+    </sql>
+</mapper>
